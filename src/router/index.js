@@ -59,6 +59,11 @@ let router = new Router({
       ]
     },
     {
+      path: '/project',
+      name: 'project',
+      component: r => require.ensure([], () => r(require('@/components/view/project')), 'projectContent')
+    },
+    {
       path: '*',
       redirect: { name: 'index' }
     }
